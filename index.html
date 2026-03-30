@@ -6,12 +6,12 @@
   <title>Behavioral Health Access Navigator</title>
   <meta
     name="description"
-    content="Behavioral Health Access Navigator is a New Jersey-focused initiative to make behavioral-health referrals more plausible, transparent, and usable."
+    content="AI-powered behavioral health navigation for New Jersey. We help care teams find plausible provider options using fused public data, transparent ranking, and honest confidence signals."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
@@ -20,185 +20,234 @@
   <div class="page-shell">
     <header class="topbar">
       <a class="brand" href="#home">
-        <span class="brand-mark">BH</span>
-        <span class="brand-copy">
-          <strong>BehavioralHealthAccess</strong>
-          <span>New Jersey access navigation</span>
-        </span>
+        <svg class="brand-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor" opacity="0.1"/>
+          <path d="M8 16h4v-4h8v4h4v4h-4v4h-8v-4H8v-4z" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">BehavioralHealthAccess</span>
       </a>
       <nav class="menu" aria-label="Primary navigation">
         <a href="#problem">Problem</a>
-        <a href="#system">System</a>
+        <a href="#system">How it works</a>
         <a href="#data">Data</a>
         <a href="#pilot">Pilot</a>
         <a href="#team">Team</a>
+        <a href="#contact" class="menu-cta">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero panel" id="home">
-        <div class="hero-copy">
-          <p class="eyebrow">Behavioral health access, rebuilt for the real world</p>
-          <h1>We help care teams find plausible behavioral-health options without pretending broken directories are reliable.</h1>
-          <p class="lede">
-            The project combines public provider, facility, shortage-area, and payer data into a ranked access navigator
-            for New Jersey. It is built for coordinators, discharge planners, and social workers who need a practical
-            starting point, not another dead-end list.
-          </p>
-        </div>
-        <div class="hero-meta">
-          <div class="stat-card">
-            <span class="stat-label">Focus</span>
-            <strong>New Jersey statewide</strong>
+      <section class="hero" id="home">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">New Jersey behavioral health navigation</p>
+            <h1>Better referrals start with better data.</h1>
+            <p class="lede">
+              Care coordinators, social workers, and discharge planners deserve more than stale directories and dead-end phone calls.
+              We fuse five public data sources into a transparent, ranked navigator that shows which behavioral health options
+              are actually plausible — and explains why.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#system">See how it works</a>
+              <a class="btn btn-ghost" href="#team">Meet the team</a>
+            </div>
           </div>
-          <div class="stat-card">
-            <span class="stat-label">Primary users</span>
-            <strong>Care coordinators and navigators</strong>
-          </div>
-          <div class="stat-card">
-            <span class="stat-label">Output</span>
-            <strong>Ranked options with confidence bands</strong>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-number">5</span>
+              <span class="stat-desc">Public data sources fused</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">NJ</span>
+              <span class="stat-desc">Statewide coverage</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">3</span>
+              <span class="stat-desc">Confidence tiers per result</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="story-grid panel" id="problem">
-        <div class="section-intro">
-          <p class="eyebrow">Why this matters</p>
-          <h2>Referrals fail because the data is fragmented, stale, and hard to trust.</h2>
+      <section class="section" id="problem">
+        <div class="section-header">
+          <p class="eyebrow">The problem</p>
+          <h2>Referrals fail because the data underneath them is broken.</h2>
+          <p class="section-sub">Every day, navigators and coordinators waste hours calling numbers from directories that were wrong before they were even published.</p>
         </div>
-        <div class="card-list">
-          <article class="info-card accent-card">
+        <div class="grid-3">
+          <article class="card card-highlight">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            </div>
             <h3>Directories drift</h3>
-            <p>Provider lists go stale fast. Addresses move, specialties are messy, and network status can contradict across sources.</p>
+            <p>Provider addresses move, specialties are miscoded, and network status contradicts across sources. The directory was already wrong when someone printed it.</p>
           </article>
-          <article class="info-card">
-            <h3>Teams need plausibility</h3>
-            <p>Social workers and care coordinators need a defensible shortlist that explains why an option is worth trying first.</p>
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Navigators need plausibility, not promises</h3>
+            <p>Social workers need a defensible shortlist that explains why an option is worth trying first — not a wall of names with no signal.</p>
           </article>
-          <article class="info-card">
-            <h3>Shortage makes friction worse</h3>
-            <p>When behavioral-health capacity is already constrained, navigation failure becomes its own barrier to care.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="process panel" id="system">
-        <div class="section-intro">
-          <p class="eyebrow">What the system does</p>
-          <h2>A transparent navigator, not a magical booking engine.</h2>
-        </div>
-        <div class="timeline">
-          <article>
-            <span>01</span>
-            <h3>Collect inputs</h3>
-            <p>ZIP code, payer, care need, age group, telehealth preference, and travel radius.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Reconcile evidence</h3>
-            <p>We match providers and facilities across public sources, then score them for fit, distance, and corroboration.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Return ranked options</h3>
-            <p>Every result includes explanation tags and a confidence level so the user knows what the data supports.</p>
+          <article class="card">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3>Shortage amplifies friction</h3>
+            <p>When behavioral health capacity is already constrained, every failed referral attempt costs time a patient may not have.</p>
           </article>
         </div>
       </section>
 
-      <section class="panel" id="data">
-        <div class="section-intro">
+      <section class="section section-dark" id="system">
+        <div class="section-header">
+          <p class="eyebrow">How it works</p>
+          <h2>A transparent navigator, not a black box.</h2>
+        </div>
+        <div class="process-steps">
+          <article class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>User inputs</h3>
+              <p>ZIP code, insurance type, care need, age group, telehealth preference, and travel radius. Simple inputs that match how navigators already think about referrals.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Evidence reconciliation</h3>
+              <p>We match providers and facilities across five public sources, then score each option for service fit, geographic proximity, network evidence, and source corroboration.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Ranked results with explanation</h3>
+              <p>Every result carries a confidence label — high, medium, or low — plus explanation tags showing exactly which sources support it and where evidence is thin.</p>
+            </div>
+          </article>
+        </div>
+        <div class="confidence-bar">
+          <div class="conf-level conf-high">
+            <strong>High confidence</strong>
+            <span>2+ corroborating sources, strong service and network fit</span>
+          </div>
+          <div class="conf-level conf-med">
+            <strong>Medium confidence</strong>
+            <span>One strong source, partial corroboration</span>
+          </div>
+          <div class="conf-level conf-low">
+            <strong>Low confidence</strong>
+            <span>Single source, weak network or service evidence</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="data">
+        <div class="section-header">
           <p class="eyebrow">Data backbone</p>
-          <h2>Public data, fused carefully.</h2>
+          <h2>Five public sources. Zero black boxes.</h2>
+          <p class="section-sub">Every recommendation traces back to visible, auditable evidence. No proprietary data, no opaque scoring.</p>
         </div>
-        <div class="data-grid">
-          <article class="source-card">
+        <div class="data-sources">
+          <article class="source">
+            <div class="source-badge">CMS</div>
             <h3>NPPES</h3>
-            <p>Provider identity, taxonomy, addresses, and monthly churn.</p>
+            <p>Provider identity, taxonomy codes, practice addresses, and monthly update churn tracking.</p>
           </article>
-          <article class="source-card">
-            <h3>SAMHSA N-SUMHSS</h3>
-            <p>Behavioral-health facility services, locations, and utilization context.</p>
+          <article class="source">
+            <div class="source-badge">SAMHSA</div>
+            <h3>N-SUMHSS</h3>
+            <p>Behavioral health facility locations, service types, and utilization context.</p>
           </article>
-          <article class="source-card">
-            <h3>HRSA HPSA and AHRF</h3>
-            <p>Shortage-area designations and regional access context.</p>
+          <article class="source">
+            <div class="source-badge">HRSA</div>
+            <h3>HPSA / AHRF</h3>
+            <p>Mental health shortage area designations and county-level access context.</p>
           </article>
-          <article class="source-card">
-            <h3>Payer Directory APIs</h3>
-            <p>Audited network evidence from a limited set of public payer endpoints.</p>
+          <article class="source">
+            <div class="source-badge">CMS</div>
+            <h3>Payer directories</h3>
+            <p>Audited network evidence from publicly mandated payer directory API endpoints.</p>
           </article>
-          <article class="source-card">
-            <h3>CMS IPF Quality</h3>
-            <p>Facility quality signals where inpatient psychiatric reporting is available.</p>
-          </article>
-          <article class="source-card">
-            <h3>Source transparency</h3>
-            <p>Every recommendation is grounded in visible evidence instead of opaque scoring claims.</p>
+          <article class="source">
+            <div class="source-badge">CMS</div>
+            <h3>IPF Quality</h3>
+            <p>Inpatient psychiatric facility quality measures where CMS reporting is available.</p>
           </article>
         </div>
       </section>
 
-      <section class="panel pilot" id="pilot">
-        <div class="section-intro">
-          <p class="eyebrow">Pilot path</p>
-          <h2>Start in New Jersey, prove usefulness, then expand with discipline.</h2>
+      <section class="section" id="pilot">
+        <div class="section-header">
+          <p class="eyebrow">Pilot scope</p>
+          <h2>Start in New Jersey. Prove usefulness. Then expand.</h2>
         </div>
-        <div class="pilot-layout">
-          <div class="pilot-card">
-            <h3>Initial pilot</h3>
-            <p>Statewide coverage with a Camden-centered demo narrative for community relevance and tighter validation.</p>
-          </div>
-          <div class="pilot-card">
-            <h3>Deliverable</h3>
-            <p>A working navigator for coordinators, plus a reproducible data pipeline, responsible-AI memo, and evaluation plan.</p>
-          </div>
-          <div class="pilot-card">
-            <h3>Operating principle</h3>
-            <p>Show what the evidence supports. Flag uncertainty early. Never oversell live availability that public data cannot confirm.</p>
-          </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Geography</h3>
+            <p>New Jersey statewide coverage with a Camden-centered demo for community relevance and tighter validation against local ground truth.</p>
+          </article>
+          <article class="card">
+            <h3>Deliverables</h3>
+            <p>Working navigator, reproducible data pipeline, responsible-AI documentation, evaluation plan, and a product story ready for funding conversations.</p>
+          </article>
+          <article class="card">
+            <h3>Principles</h3>
+            <p>Show what evidence supports. Flag uncertainty. Never oversell live availability that public data cannot confirm.</p>
+          </article>
         </div>
       </section>
 
-      <section class="panel team-panel" id="team">
-        <div class="section-intro">
-          <p class="eyebrow">Team shape</p>
-          <h2>An interdisciplinary build that treats product, ethics, and data quality as core work.</h2>
+      <section class="section section-team" id="team">
+        <div class="section-header">
+          <p class="eyebrow">Leadership</p>
+          <h2>Built by people who understand the problem, the technology, the data, and the market.</h2>
         </div>
         <div class="team-grid">
-          <article>
-            <h3>Sarthak Chandervanshi</h3>
-            <p>Technical lead for data fusion, ranking, and the core pipeline that turns messy public sources into usable results.</p>
-          </article>
-          <article>
-            <h3>Sangeetha Maheshwari</h3>
-            <p>Leads data quality, evaluation, and feature logic so every signal in the ranking system stays traceable and defensible.</p>
-          </article>
-          <article>
+          <article class="team-card team-card-featured">
+            <div class="team-role">CEO</div>
             <h3>Caitlin Cohen</h3>
-            <p>Owns user research and responsible-AI framing, with a focus on trust, bias limits, and human-centered product decisions.</p>
+            <p>Ten years in healthcare, psychology research training, and a focus on ethics, cognition, and human-centered design. Leads product direction and ensures the venture stays credible, useful, and sensitive to real human needs.</p>
           </article>
-          <article>
-            <h3>Joseph Thorpe and Victor Sheng</h3>
-            <p>Support product narrative, website and pilot rollout, plus integration and validation work that keeps the prototype usable.</p>
+          <article class="team-card team-card-featured">
+            <div class="team-role">CTO</div>
+            <h3>Sarthak Chandervanshi</h3>
+            <p>Master's in Data Science with deep experience in Python, ML frameworks, and data engineering. Leads the technical pipeline — data fusion, entity matching, ranking engine, and backend architecture.</p>
           </article>
+          <article class="team-card team-card-featured">
+            <div class="team-role">COO</div>
+            <h3>Sangeetha Maheshwari</h3>
+            <p>Master's in Business Analytics with hands-on experience in Python, R, and data workflows. Leads operations and the pipeline that turns messy public data into a working, traceable product.</p>
+          </article>
+          <article class="team-card team-card-featured">
+            <div class="team-role">CMO</div>
+            <h3>Joseph Thorpe</h3>
+            <p>Marketing strategy, customer positioning, and business communication. Shapes the product narrative so the right users find it, understand it, and trust it.</p>
+          </article>
+        </div>
+        <div class="advisor-bar">
+          <div class="advisor-content">
+            <div class="team-role">External Advisor</div>
+            <h3>Dr. Andrei Nikiforov</h3>
+            <p>Finance professor at Rutgers&ndash;Camden, CFA charterholder, chair of the school's AI Task Force. Provides strategic direction on AI, analytics, startup execution, and investor-grade project discipline.</p>
+          </div>
         </div>
       </section>
 
-      <section class="panel closing-panel" id="contact">
-        <div class="closing-copy">
-          <p class="eyebrow">What comes next</p>
-          <h2>Build the first useful layer of behavioral-health navigation.</h2>
-          <p>
-            The project is designed to become a credible pilot, not just a classroom artifact. The next step is a clean
-            technical foundation, a testable user workflow, and a product story that stays honest about what the data can
-            and cannot say.
-          </p>
+      <section class="section section-cta" id="contact">
+        <div class="cta-inner">
+          <h2>Interested in what we are building?</h2>
+          <p>We are looking for pilot partners, domain experts, and organizations who care about fixing behavioral health access in New Jersey.</p>
+          <a class="btn btn-primary btn-lg" href="mailto:hello@behavioralhealthaccess.org">Get in touch</a>
         </div>
-        <a class="cta" href="mailto:hello@behavioralhealthaccess.org">Contact the team</a>
       </section>
     </main>
+
+    <footer class="footer">
+      <span>BehavioralHealthAccess &middot; Rutgers University&ndash;Camden &middot; AI Campus Cohort 2026</span>
+    </footer>
   </div>
 
   <script src="script.js"></script>
